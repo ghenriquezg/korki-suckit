@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poesía para el Vixo</title>
+    <style>
+        body {
+            background-color: #050505; /* Fondo casi negro */
+            color: #ffffff;
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilo del encabezado principal */
+        h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 5vw;
+            color: #ff0055; /* Color fucsia neón */
+            text-shadow: 0 0 15px #ff0055;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        /* El contenedor que pone las 3 cosas lado a lado */
+        .contenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Centra todo verticalmente */
+            max-width: 1200px; /* Ancho máximo para que no se estire infinito en teles grandes */
+            margin: 0 auto; /* Centra el contenedor en la pantalla */
+            gap: 20px; /* Espacio entre las imágenes y el texto */
+        }
+
+        /* Estilo para las dos imágenes de los costados */
+        .imagen-lateral {
+            width: 25vw; /* Ocupan un cuarto de la pantalla cada una */
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Resplandor celeste */
+            animation: flotar 4s ease-in-out infinite;
+        }
+
+        /* Retrasamos un poco la segunda imagen para que no floten igual */
+        .imagen-derecha {
+            animation-delay: 1s; 
+        }
+
+        /* Estilo del párrafo central */
+        .parrafo-central {
+            flex-grow: 1; /* Hace que el texto ocupe todo el espacio que sobra al medio */
+            font-size: 1.5rem;
+            color: #00ffcc; /* Color celeste/verde neón */
+            line-height: 1.6;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #00ffcc;
+            padding: 0 20px;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Ajuste para celulares: pone todo hacia abajo si la pantalla es chica */
+        @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column;
+            }
+            .imagen-lateral {
+                width: 80%;
+                margin: 20px 0;
+            }
+            h1 {
+                font-size: 12vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>VIXO XUPALO MEANDOO</h1>
+
+    <div class="contenedor">
+        
+        <img src="https://i.postimg.cc/K8hyLNdT/kuukiiiki.jpg" alt="Imagen Izquierda" class="imagen-lateral">
+
+        <p class="parrafo-central">
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando 
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando 
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando 
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando 
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando 
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando 
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando 
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando 
+            vixo xupalo meando vixo xupalo meando vixo xupalo meando vixo xupalo meando
+        </p>
+
+        <img src="https://i.postimg.cc/K8hyLNdT/kuukiiiki.jpg" alt="Imagen Derecha" class="imagen-lateral imagen-derecha">
+
+    </div>
+
+</body>
+</html>
